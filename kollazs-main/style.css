@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&family=Pacifico&display=swap');
+body {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #ffe4b5;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  font-family: 'Cookie', cursive;
+  font-size: 50px;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: rgb(255, 255, 255);
+  font-family: 'Dancing Script', cursive;
+  font-size: 43px;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
